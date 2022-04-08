@@ -70,7 +70,7 @@ function getBase(endPoint, cb) {
 
 function Template(route, btn, className) {
   return `
-    <button onclick="getRoute('${route}')" class="${className}">${btn}</button>
+    <button onclick="getRoute('${route}')" class="${className} btn">${btn}</button>
   `
 }
 
