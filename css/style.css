@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.loader {
+  color: var(--fg);
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pl {
+  display: block;
+  width: 6.25em;
+  height: 6.25em;
+}
+
+.pl__ring,
+.pl__ball {
+  animation: ring 2s ease-out infinite;
+}
+
+.pl__ball {
+  animation-name: ball;
+}
+
+/* Animation */
+@keyframes ring {
+  from {
+    stroke-dasharray: 0 257 0 0 1 0 0 258;
+  }
+
+  25% {
+    stroke-dasharray: 0 0 0 0 257 0 258 0;
+  }
+
+  50%,
+  to {
+    stroke-dasharray: 0 0 0 0 0 515 0 0;
+  }
+}
+
+@keyframes ball {
+
+  from,
+  50% {
+    animation-timing-function: ease-in;
+    stroke-dashoffset: 1;
+  }
+
+  64% {
+    animation-timing-function: ease-in;
+    stroke-dashoffset: -109;
+  }
+
+  78% {
+    animation-timing-function: ease-in;
+    stroke-dashoffset: -145;
+  }
+
+  92% {
+    animation-timing-function: ease-in;
+    stroke-dashoffset: -157;
+  }
+
+  57%,
+  71%,
+  85%,
+  99%,
+  to {
+    animation-timing-function: ease-out;
+    stroke-dashoffset: -163;
+  }
+}
+
+body{
+  background: url('../img/img2.akspic.ru-sinij_kobalt-pryamougolnik-polutona_i_ottenki-elektrik-sklon-6000x6000.png') center / cover no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.container,
+.cards {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.d_flex,
+.d_flex_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.d_flex {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: lightslategray;
+  padding: 10px;
+  width: 100%;
+}
+
+button {
+  padding: 15px 25px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-size: 17px;
+
+}
+
+.usersBtn {
+  background-color: red;
+}
+
+.usersPosts {
+  background-color: green;
+}
+
+.usersComments {
+  background-color: blue;
+}
+
+.usersAlbums {
+  background-color: lightcoral;
+}
+
+.usersPhotos {
+  background-color: darkblue;
+}
+
+.usersTodos {
+  background-color: darkmagenta;
+}
+
+.d_flex_card {
+  margin-top: 100px;
+}
+
+/* ==================================== */
+.cardPost {
+  width: 300px;
+  height: 300px;
+  background-color: green;
+  color: white;
+  margin: 10px;
+}
+
+.cardPost .card_header {
+  border-bottom: 1px solid white;
+}
+
+.cardPost .card_header .card_text {
+  padding: 10px;
+}
+
+.cardPost .card_body p {
+  padding: 10px;
+}
+
+/* ======================================== */
+
+.cardUsers {
+  width: 350px;
+  min-height: 470px;
+  background-color: red;
+  color: white;
+  margin: 10px;
+}
+
+.cardUsers .card_header {
+  border-bottom: 1px solid white;
+}
+
+.cardUsers .card_header .card_text {
+  padding: 10px;
+}
+
+.cardUsers .card_body {
+  padding: 10px;
+}
+
+.cardUsers .card_body ul {
+  margin: 5px 0;
+}
+
+.cardUsers .card_body ul li {
+  margin: 5px 0;
+}
+
+/* ========================================== */
+
+.cardComments {
+  width: 300px;
+  min-height: 300px;
+  background-color: slateblue;
+  color: white;
+  margin: 10px;
+}
+
+.cardComments .card_header {
+  border-bottom: 1px solid white;
+}
+
+.cardComments .card_header .card_text {
+  padding: 10px;
+}
+
+.cardComments .card_body p,
+.cardComments .card_body h2 {
+  padding: 10px;
+}
+
+/* ============================================== */
+
+.cardAlbums {
+  width: 300px;
+  min-height: 300px;
+  background-color: lightcoral;
+  color: white;
+  margin: 10px;
+}
+
+.cardAlbums .card_header {
+  border-bottom: 1px solid white;
+}
+
+.cardAlbums .card_header .card_text {
+  padding: 10px;
+}
+
+.cardAlbums .card_body p {
+  padding: 10px;
+}
+
+/* =============================================== */
+
+.cardPhotos {
+  width: 300px;
+  min-height: 300px;
+  background-color: darkblue;
+  color: white;
+  margin: 10px;
+  text-align: center;
+}
+
+.cardPhotos .card_header {
+  border-bottom: 1px solid white;
+}
+
+.cardPhotos .card_header .card_text {
+  padding: 10px;
+}
+
+.cardPhotos .card_body img {
+  width: 150px;
+  min-height: 150px;
+}
+
+/* ============================================*/
+
+.cardTodos {
+  width: 300px;
+  min-height: 300px;
+  background-color: darkmagenta;
+  color: white;
+  margin: 10px;
+}
+
+.cardTodos .card_header {
+  border-bottom: 1px solid white;
+}
+
+.cardTodos .card_header .card_text {
+  padding: 10px;
+}
+
+.cardTodos .card_body p {
+  padding: 10px;
+  font-size: 20px;
+}
